@@ -45,8 +45,11 @@ export default {
     getPageEvents(routeTo, next)
   },
   computed: {
+    page() {
+      return parseInt(this.$route.query.page) || 1
+    },
     hasNextPage() {
-      return this.event.eventsTotal > this.page * this.perPage
+      return this.event.eventsTotal > this.page * this.event.perPage
     },
     ...mapState(['event', 'user'])
   }
