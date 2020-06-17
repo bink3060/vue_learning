@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button v-show="loggedIn">Logout</button>
+    <button data-testid="btn-logout" v-show="loggedIn">Logout</button>
   </div>
 </template>
 
